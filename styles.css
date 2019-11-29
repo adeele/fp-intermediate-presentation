@@ -1,0 +1,32 @@
+[name=wrapper] > ol > li,
+[name=wrapper] > ul > li {
+    padding-bottom: 30px;
+}
+
+[name=wrapper] {
+    padding: 60px;
+}
+
+code {
+    font-size: 20px;
+}
+
+[class*=Split] > *:first-child {
+    padding-right: 20px;
+}
+
+[class*=Split] > *:last-child {
+    padding-left: 20px;
+}
+
+[class*=Split] > * {
+    min-width: 500px;
+}
+
+pre {
+    line-height: 1 !important;
+}
+
+[class*=Image] {
+    background-size: contain !important;
+}

@@ -5,7 +5,7 @@
   "scripts": {
     "start": "mdx-deck deck.mdx",
     "copy-static": "cp static dist -r",
-    "build": "mdx-deck build deck.mdx",
+    "build": "mdx-deck --basepath=\"/functional-programming-presentation\" build deck.mdx",
     "postbuild": "npm run copy-static",
     "pdf": "mdx-deck pdf deck.mdx",
     "image": "mdx-deck screenshot deck.mdx",
@@ -17,7 +17,9 @@
   "author": "Grzegorz Rozdzialik",
   "license": "MIT",
   "dependencies": {
-    "mdx-deck": "^2.3.2",
+    "lodash": "^4.17.14",
+    "lodash.merge": "^4.6.2",
+    "mdx-deck": "^2.5.0",
     "raw-loader": "^2.0.0"
   },
   "devDependencies": {
