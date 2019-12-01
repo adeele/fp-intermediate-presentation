@@ -140,27 +140,27 @@ Adrianna Małkiewicz-Błotniak
 
 <ul>
   <Appear>
-            <li>
-                <b>Loops</b> (while, do ... while, for, for ... of, for ... in)
-            </li>
-            <li>
-                <b>Mutable variable declarations</b> (var or let)
-            </li>
-            <li>
-                <b>Void functions</b>
-            </li>
-            <li>
-                <b>Object mutations</b>
-            </li>
-            <li>
-                <b>Array mutator methods</b> (copyWithin, fill, pop, push, reverse, shift, sort, splice, unshift)
-            </li>
-            <li>
-                <b>Map mutator methods</b> (clear, delete, set)
-            </li>
-            <li>
-                <b>Set mutator methods</b> (add, clear, delete)
-            </li>
+        <li>
+            <b>Loops</b> (while, do ... while, for, for ... of, for ... in)
+        </li>
+        <li>
+            <b>Mutable variable declarations</b> (var or let)
+        </li>
+        <li>
+            <b>Void functions</b>
+        </li>
+        <li>
+            <b>Object mutations</b>
+        </li>
+        <li>
+            <b>Array mutator methods</b> (copyWithin, fill, pop, push, reverse, shift, sort, splice, unshift)
+        </li>
+        <li>
+            <b>Map mutator methods</b> (clear, delete, set)
+        </li>
+        <li>
+            <b>Set mutator methods</b> (add, clear, delete)
+        </li>
   </Appear>
 </ul>
 
@@ -180,18 +180,23 @@ awaiting the rest of the arguments
 
 ```js
 const add = (x, y) => x + y;
-add(2, 3);
+const result = add(2, 3);
+
+const curriedAdd = (x) => (y) => x + y;
+// or: const curriedAdd = curry(add);
+const curriedResult = curriedAdd(2)(3);
 ```
 
 </div>
 <div>
 
 ```js
-const add = (x) => (y) => x + y;
-add(2)(3);
+const add2 = (x) => add(x, 2);
+const result = add2(3);
 
-const add2 = add(2);
-add2(3);
+const partialAdd2 = curriedAdd(2);
+// or: const partialAdd2 = partial(add, 2);
+const partialResult = partialAdd2(3);
 ```
 
 </div>
