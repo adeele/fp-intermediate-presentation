@@ -1,4 +1,5 @@
 import { Appear, Image } from 'mdx-deck'
+import { Split } from 'mdx-deck/layouts'
 
 import yellow from '@mdx-deck/themes/yellow'
 import highlight from '@mdx-deck/themes/syntax-highlighter-prism'
@@ -137,9 +138,8 @@ Adrianna Małkiewicz-Błotniak
 
 ### What it isn't
 
-<ol>
+<ul>
   <Appear>
-        <ul>
             <li>
                 <b>Loops</b> (while, do ... while, for, for ... of, for ... in)
             </li>
@@ -161,9 +161,70 @@ Adrianna Małkiewicz-Błotniak
             <li>
                 <b>Set mutator methods</b> (add, clear, delete)
             </li>
-        </ul>
   </Appear>
-</ol>
+</ul>
+
+---
+
+### More concepts
+
+**Currying** - translating the evaluation of a function that takes multiple arguments into evaluating a sequence of
+functions, each with a single argument
+
+**Partial application** - applying some (but not all) of the arguments to a function and returning a new function
+awaiting the rest of the arguments
+
+
+<Split>
+<div>
+
+```js
+const add = (x, y) => x + y;
+add(2, 3);
+```
+
+</div>
+<div>
+
+```js
+const add = (x) => (y) => x + y;
+add(2)(3);
+
+const add2 = add(2);
+add2(3);
+```
+
+</div>
+</Split>
+
+---
+
+### More concepts
+
+<Split>
+<div>
+
+Normal people
+```js
+const array = [1, 2, 3];
+const multiply = (x, y) => x * y;
+const doubledArray = array.map((x) => multiply(x, 2));
+const tripledArray = array.map((x) => multiply(x, 3));
+```
+
+</div>
+<div>
+
+Functional people
+```js
+const array = [1, 2, 3];
+const multiply = (x) => (y) => x * y;
+const doubledArray = array.map(multiply(2));
+const tripledArray = array.map(multiply(3));
+```
+
+</div>
+</Split>
 
 ---
 
