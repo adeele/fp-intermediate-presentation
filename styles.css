@@ -21,6 +21,7 @@ code {
 
 [class*=Split] > * {
     min-width: 500px;
+    width: unset !important;
 }
 
 pre {

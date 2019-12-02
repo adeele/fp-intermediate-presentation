@@ -102,31 +102,33 @@ Adrianna Małkiewicz-Błotniak
 ### Why?
 
 <ul>
-    <Appear>
-        <li>
-            more predictable code
-        </li>
-        <li>
-            less verbose code
-        </li>
-        <li>
-            less error-prone
-        </li>
-        <li>
-            easier to test
-        </li>
-        <li>
-            easily reusable code
-        </li>
-        <li>
-            faster to write code
-        </li>
-    </Appear>
+  <Appear>
+    <li>
+        more predictable code
+    </li>
+    <li>
+        less verbose code
+    </li>
+    <li>
+        less error-prone
+    </li>
+    <li>
+        easier to test
+    </li>
+    <li>
+        easily reusable code
+    </li>
+    <li>
+        faster to write code
+    </li>
+  </Appear>
 </ul>
 
 ---
 
-## Task #1
+## Task #1 & Task #2
+
+<Image src="static/meme2.jpg" width="auto" height="600px" />
 
 ---
 
@@ -140,29 +142,74 @@ Adrianna Małkiewicz-Błotniak
 
 <ul>
   <Appear>
-        <li>
-            <b>Loops</b> (while, do ... while, for, for ... of, for ... in)
-        </li>
-        <li>
-            <b>Mutable variable declarations</b> (var or let)
-        </li>
-        <li>
-            <b>Void functions</b>
-        </li>
-        <li>
-            <b>Object mutations</b>
-        </li>
-        <li>
-            <b>Array mutator methods</b> (copyWithin, fill, pop, push, reverse, shift, sort, splice, unshift)
-        </li>
-        <li>
-            <b>Map mutator methods</b> (clear, delete, set)
-        </li>
-        <li>
-            <b>Set mutator methods</b> (add, clear, delete)
-        </li>
+    <li>
+      <b>Loops</b> (while, do ... while, for, for ... of, for ... in)
+    </li>
+    <li>
+      <b>Mutable variable declarations</b> (var or let)
+    </li>
+    <li>
+      <b>Void functions</b>
+    </li>
+    <li>
+      <b>Object mutations</b>
+    </li>
+    <li>
+      <b>Array mutator methods</b> (copyWithin, fill, pop, push, reverse, shift, sort, splice, unshift)
+    </li>
+    <li>
+      <b>Map mutator methods</b> (clear, delete, set)
+    </li>
+    <li>
+      <b>Set mutator methods</b> (add, clear, delete)
+    </li>
   </Appear>
 </ul>
+
+---
+
+### More concepts
+
+**Function composition** - mathematical concept that allows you to combine two or more functions into a new function
+
+**Tactic programming / point-free style** - a programming paradigm in which function definitions do not identify the
+arguments (or "points") on which they operate
+
+<Split>
+<div>
+
+```js
+const increment = x => x + 1;
+const double = x => x * 2;
+const incrementAndDouble = (x) => increment(double(x));
+// or: const incrementAndDouble = compose(increment, double);
+// or: const incrementAndDouble = pipe(double, increment);
+
+const result = incrementAndDouble(2);
+```
+
+</div>
+<div>
+
+```js
+const array = [1, 2, 3];
+const result = array.map(x => incrementAndDouble(x));
+const pointFreeResult = array.map(incrementAndDouble);
+```
+
+```js
+const snakeCase = word => word.toLowerCase().replace(/\s+/ig, '_');
+const snakeCase = compose(replace(/\s+/ig, '_'), toLowerCase);
+```
+
+</div>
+</Split>
+
+---
+
+## Task #3
+
+<Image src="static/meme4.jpeg" width="600px" height="600px" />
 
 ---
 
