@@ -207,12 +207,6 @@ const snakeCase = compose(replace(/\s+/ig, '_'), toLowerCase);
 
 ---
 
-## Task #3
-
-<Image src="static/meme4.jpeg" width="600px" height="600px" />
-
----
-
 ### More concepts
 
 **Currying** - translating the evaluation of a function that takes multiple arguments into evaluating a sequence of
@@ -251,38 +245,50 @@ const partialResult = partialAdd2(3);
 
 ---
 
-### More concepts
+## Task #3
 
-<Split>
-<div>
+<Image src="static/meme4.jpeg" width="600px" height="600px" />
 
-Normal people
-```js
-const array = [1, 2, 3];
-const multiply = (x, y) => x * y;
-const doubledArray = array.map((x) => multiply(x, 2));
-const tripledArray = array.map((x) => multiply(x, 3));
-```
+---
 
-</div>
-<div>
+## Bonus: Functional Programming in React
 
-Functional people
-```js
-const array = [1, 2, 3];
-const multiply = (x) => (y) => x * y;
-const doubledArray = array.map(multiply(2));
-const tripledArray = array.map(multiply(3));
-```
+<Image src="static/meme6.gif" width="auto" height="600px" />
 
-</div>
-</Split>
+---
+
+## Explanation
+
+<ul>
+  <Appear>
+    <li>
+      <b>Render function</b> - a component is something that returns an output based on an input
+    </li>
+    <li>
+      <b>Components as functions</b> - simple components can be implemented in a form of function
+    </li>
+    <li>
+      <b>Immutability of props</b> - granting their immutability avoids side effects
+    </li>
+    <li>
+      <b>Unidirectional data flow</b> - effect of components composition
+    </li>
+    <li>
+      <b>Higher-Order components</b> - allows reusing a component logic to create a new component
+    </li>
+    <li>
+      <b>Curried libraries functions</b> - easy to use
+    </li>
+  </Appear>
+</ul>
 
 ---
 
 ## More to practice
 
-[CodinGame](https://www.codingame.com/playgrounds/2980/practical-introduction-to-functional-programming-with-js)
+* [CodinGame](https://www.codingame.com/playgrounds/2980/practical-introduction-to-functional-programming-with-js)
+* [Professor Frisby's Mostly Adequate Guide To Functional Programming]
+  (https://mostly-adequate.gitbooks.io/mostly-adequate-guide)
 
 ---
 
