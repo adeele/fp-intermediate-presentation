@@ -19,8 +19,10 @@
   "dependencies": {
     "lodash": "^4.17.19",
     "lodash.merge": "^4.6.2",
-    "mdx-deck": "^2.5.0",
-    "raw-loader": "^2.0.0"
+    "mdx-deck": "^4.1.1",
+    "prismjs": "^1.21.0",
+    "raw-loader": "^2.0.0",
+    "serialize-javascript": "^4.0.0"
   },
   "devDependencies": {
     "@types/react": "^16.8.15",
